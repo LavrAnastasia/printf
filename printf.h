@@ -6,7 +6,7 @@
 /*   By: alavrukh <alavrukh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:29:27 by alavrukh          #+#    #+#             */
-/*   Updated: 2025/05/22 16:26:38 by alavrukh         ###   ########.fr       */
+/*   Updated: 2025/05/23 12:03:30 by alavrukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@
 int ft_printf(const char *str, ...);
 int ft_putchar	(char c);
 int ft_write_str (char *str);
+int ft_write_base (unsigned long num, unsigned int base, char *str);
+int ft_write_int (long num);
+int ft_write_ptr (void *ptr);
 
 #endif 
