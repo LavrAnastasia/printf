@@ -6,11 +6,11 @@
 /*   By: alavrukh <alavrukh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 14:16:53 by alavrukh          #+#    #+#             */
-/*   Updated: 2025/06/04 17:54:31 by alavrukh         ###   ########.fr       */
+/*   Updated: 2025/06/06 15:10:36 by alavrukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_format(const char *str, va_list *argc)
 {
