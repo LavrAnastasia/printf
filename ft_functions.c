@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   functions.c                                        :+:      :+:    :+:   */
+/*   ft_functions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alavrukh <alavrukh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:34:28 by alavrukh          #+#    #+#             */
-/*   Updated: 2025/05/23 14:11:17 by alavrukh         ###   ########.fr       */
+/*   Updated: 2025/06/04 17:45:46 by alavrukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int ft_putchar (char c)
-{
-	return (write (1, &c, 1));
-}
+// int	ft_putchar(char c)
+// {
+// 	return (write (1, &c, 1));
+// }
 
-int ft_write_str (char *str)
+int	ft_write_str(char *str)
 {
-	int all_letter;
-	int letter;
+	int	all_letter;
+	int	letter;
 
 	if (!str)
 		return (write(1, "(null)", 6));
 	all_letter = 0;
 	letter = 0;
-
 	while (*str)
 	{
 		letter = write (1, str, 1);
@@ -38,14 +37,13 @@ int ft_write_str (char *str)
 	return (all_letter);
 }
 
-int ft_write_base (unsigned long num, unsigned int base, char *str)
+int	ft_write_base(unsigned long num, unsigned int base, char *str)
 {
-	int count;
-	int letter;
+	int	count;
+	int	letter;
 
 	count = 0;
 	letter = 0;
-
 	if (num > base - 1)
 		count = ft_write_base(num / base, base, str);
 	if (count == -1)
@@ -54,37 +52,35 @@ int ft_write_base (unsigned long num, unsigned int base, char *str)
 	if (letter == -1)
 		return (-1);
 	count = count + letter;
-	return(count);
+	return (count);
 }
 
-
-int ft_write_int (long num)
+int	ft_write_int(long num)
 {
-	int sign;
-	int number;
+	int	sign;
+	int	number;
 
 	sign = 0;
 	number = 0;
-
 	if (num < 0)
 	{
 		sign = write(1, "-", 1);
 		if (sign == -1)
 			return (-1);
-		number = -number;
+		num = -num;
 	}
 	number = ft_write_base (num, 10, BASE10);
 	if (number == -1)
-		return(-1);
-	return(sign + number);
+		return (-1);
+	return (sign + number);
 }
 
-int ft_write_ptr (void *ptr)
+int	ft_write_ptr(void *ptr)
 {
-	int ox;
-	int adress;
+	int	ox;
+	int	adress;
 
-	if(!ptr)
+	if (!ptr)
 		return (ft_write_str("(nil)"));
 	ox = 0;
 	adress = 0;
