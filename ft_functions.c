@@ -6,11 +6,11 @@
 /*   By: alavrukh <alavrukh@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 11:34:28 by alavrukh          #+#    #+#             */
-/*   Updated: 2025/06/06 15:10:23 by alavrukh         ###   ########.fr       */
+/*   Updated: 2025/06/06 13:52:26 by alavrukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "printf.h"
 
 int	ft_write_str(char *str)
 {
